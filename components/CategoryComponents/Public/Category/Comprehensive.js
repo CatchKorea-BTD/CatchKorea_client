@@ -79,12 +79,16 @@ export default function Content() {
         fetchMenuData();
     }, []);
 
+    const imageLink = "\\AppIcon\\MobileID";
+    const parts = imageLink.split("\\");
+    const iconName = parts[parts.length - 1];
+
     return (
         <>
             {menuData.map((menu, index) => (
                 <MenuBox
                     key={index}
-                    link={`/InfoComponents/Public/Comprehensive/${menu.title}`}
+                    link={`/InfoComponents/Public/Comprehensive/${iconName}`}
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
