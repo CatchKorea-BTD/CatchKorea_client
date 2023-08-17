@@ -88,7 +88,7 @@ export default function Content() {
             {menuData.map((menu, index) => (
                 <MenuBox
                     key={index}
-                    link={`/InfoComponents/Public/Comprehensive/${menu.imageLink.split("\\").pop()}`}
+                    link='/InfoComponents/Public/Comprehensive/MobileID'
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
