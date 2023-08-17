@@ -69,7 +69,7 @@ export default function Content() {
         // 백엔드 API에서 메뉴 데이터를 가져오는 함수를 호출하고 데이터를 설정합니다.
         const fetchMenuData = async () => {
             try {
-                const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/4');
+                const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/14');
                 const data = await response.json();
                 setMenuData(data);
             } catch (error) {
@@ -84,7 +84,7 @@ export default function Content() {
             {menuData.map((menu, index) => (
                 <MenuBox
                     key={index}
-                    link={menu.servicelink}
+                    link='www.com'
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
