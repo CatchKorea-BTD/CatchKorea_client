@@ -63,33 +63,34 @@ export default function Content() {
  */
 
 export default function Content() {
-    const [menuData, setMenuData] = useState([]); // 메뉴 데이터를 저장할 상태
+    const [menuData, setMenuData] = useState([]);
 
     useEffect(() => {
-        // API에서 메뉴 데이터를 가져오는 함수
+        // 백엔드 API에서 메뉴 데이터를 가져오는 함수를 호출하고 데이터를 설정합니다.
         const fetchMenuData = async () => {
             try {
-                const response = await axios.get('https://catchkorea-a5799a624288.herokuapp.com/upload/post'); 
-                setMenuData(response.data); // API에서 받아온 데이터를 상태에 저장
+                const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/4');
+                const data = await response.json();
+                setMenuData(data);
             } catch (error) {
                 console.error('Error fetching menu data:', error);
             }
         };
-
-        fetchMenuData(); // 메뉴 데이터를 가져오는 함수 호출
+        fetchMenuData();
     }, []);
 
     return (
         <>
-            {menuData.map(menu => (
+            {menuData.map((menu, index) => (
                 <MenuBox
-                    link={menu.serviceLink}
-                    iconSrc='\AppIcon\MarooAi'
+                    key={index}
+                    link={menu.servicelink}
+                    iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
-                    hashtag1={menu.hashtag} // menu 객체의 hashtag 필드 사용
+                    hashtag1={menu.hashtag}
                 />
             ))}
         </>
     );
-};
+}
