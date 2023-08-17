@@ -8,7 +8,7 @@ export default function Goverment() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/search/144');
             const jsonData = await response.json();
 
             if (jsonData) {
