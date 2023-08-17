@@ -11,7 +11,7 @@ export default function Body({ iconSrc1, appName, text1, handleDownload, handleS
                 <S.Line />
             </S.Title>
             <S.Info>{text1}</S.Info>
-            <S.AppInfo src={AppInfo} />
+            {/* <S.AppInfo src={AppInfo} /> */}
             <S.BtnZone>
                 <S.Download onClick={handleDownload}>
                     <S.Icon src="/img/Download.svg" />
