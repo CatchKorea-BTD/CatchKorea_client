@@ -84,7 +84,7 @@ export default function Content() {
             {menuData.map((menu, index) => (
                 <MenuBox
                     key={index}
-                    link='\InfoComponents\Public\Comprehensive\Goverment24'
+                    link={menu.serviceLink}
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
