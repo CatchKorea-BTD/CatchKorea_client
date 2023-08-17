@@ -10,7 +10,7 @@ export default function CGV() {
         // 백엔드 API에서 메뉴 데이터를 가져오는 함수를 호출하고 데이터를 설정합니다.
         const fetchData = async () => {
             try {
-                const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/4');
+                const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/search/4');
                 const data = await response.json();
                 setData(data);
             } catch (error) {
