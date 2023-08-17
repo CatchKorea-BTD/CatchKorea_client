@@ -79,10 +79,6 @@ export default function Content() {
         fetchMenuData();
     }, []);
 
-    const imageLink = "\\AppIcon\\MobileID";
-    const parts = imageLink.split("\\");
-    const iconName = parts[parts.length - 1];
-
     return (
         <>
             {menuData.map((menu, index) => (
