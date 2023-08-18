@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './Menubar.styled';
+import Link from 'next/link'
 
 export default function MenuBar({ menuVisible, onClick }) {
    return (
@@ -8,8 +9,9 @@ export default function MenuBar({ menuVisible, onClick }) {
             
             <S.CloseButton onClick={onClick} src='/img/free-icon-x-657059.png'></S.CloseButton>
 
-{/*             <a href="/MainComponents/Main/Main"><S.MenuIcon src='/img/Home.png' /></a>
- */}            <S.MenuText src='/img/CatchKorea.png'/>
+{/*             <a href="/MainComponents/Main/Main"><S.MenuIcon src='/img/Home.png' /></a> */}
+            <Link href="/index">
+            <S.MenuText src='/img/CatchKorea.png'/></Link>
          </S.Container>
 
 

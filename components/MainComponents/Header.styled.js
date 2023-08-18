@@ -22,6 +22,7 @@ export const Logo = styled.img`
   top: 23px; 
   left: 50%; 
   transform: translateX(-50%); 
+  cursor: pointer;
 `;
 
 export const MenuBar = styled.img`
