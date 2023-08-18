@@ -8,7 +8,7 @@ export default function Hometax() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/search/144');
             const jsonData = await response.json();
 
             if (jsonData) {
@@ -55,9 +55,9 @@ export default function Hometax() {
                 <Header/>
                 {data !== null && (
                 <Body
-                    iconSrc1='\AppIcon\Hometax.png'
+                    iconSrc1={data.imageLink}
                     appName={data.title}
-                    text1={data.contents}
+                    text1={data.content}
                     handleDownload={handleDownload}
                     handleShare={handleShare}
                     />

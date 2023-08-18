@@ -3,10 +3,11 @@ import * as S from './Body.styled';
 import Link from 'next/link';
 
 export default function Body({ iconSrc1, appName, text1, handleDownload, handleShare, AppInfo }) {
+    const fullIconSrc = `${iconSrc1}.png`;
     return (
         <S.Container>
             <S.Title>
-                <S.Icon src={iconSrc1} />
+                <S.Icon src={fullIconSrc} />
                 <S.AppName>{appName}</S.AppName>
                 <S.Line />
             </S.Title>

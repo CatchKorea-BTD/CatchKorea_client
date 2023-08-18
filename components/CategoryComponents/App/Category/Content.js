@@ -64,7 +64,7 @@ const [menuData, setMenuData] = useState([]);
 
             // id에 따라 카테고리 설정
                 if (menu.id === 44 || menu.id === 54) {
-                    category = 'BookStore';
+                    category = 'Book';
                 } else if (menu.id === 64 || menu.id === 84 || menu.id === 124) {
                     category = 'Movie';
                 } else if (menu.id === 164 || menu.id === 184) {

@@ -58,7 +58,7 @@ export default function Emergency() {
                 <Body
                     iconSrc1={data.imageLink}
                     appName={data.title}
-                    text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
+                    text1={data.content} // API 응답 데이터에 있는 앱 설명 필드
                     handleDownload={handleDownload}
                     handleShare={handleShare} 
                     />
