@@ -63,37 +63,37 @@ const [menuData, setMenuData] = useState([]);
             let category = 'BookStore';
 
             // id에 따라 카테고리 설정
-                if (menu.id === 144 || menu.id === || menu.id === 264 || menu.id === 284) {
+                if (menu.id === 44 || menu.id === 54) {
                     category = 'BookStore';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 64 || menu.id === 84 || menu.id === 124) {
                     category = 'Movie';
-                } else if (menu.id === 314) {
+                } else if (menu.id === 164 || menu.id === 184) {
                     category = 'Restaurants';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 204 || menu.id === 234 || menu.id === 244) {
                     category = 'KickBoard';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 294 || menu.id === 344 || menu.id === 414 || menu.id === 444 || menu.id === 364) {
                     category = 'Music';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 494 || menu.id === 564 || menu.id === 524 || menu.id === 544) {
                     category = 'Travel';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 654) {
                     category = 'Present';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 584) {
                     category = 'Sns';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 574) {
                     category = 'Search'
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 594 || menu.id === 624 || menu.id === 634 || menu.id === 644 || menu.id === 664) {
                     category = 'Finance';
-                } else if (menu.id === 24 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 24 || menu.id === 614) {
                     category = 'Food';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 154 || menu.id === 174 || menu.id === 194 || menu.id === 214 || menu.id === 254 || menu.id === 274) {
                     category = 'Ecommerce';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 384 || menu.id === 404 || menu.id === 424 ) {
                     category = 'Used';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 484 || menu.id === 514 || menu.id === 554 ) {
                     category = 'Home';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 104 || menu.id === 114 ) {
                     category = 'PartTime';
-                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                } else if (menu.id === 464) {
                     category = 'Trendy';
                 }
 
