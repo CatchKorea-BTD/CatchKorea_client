@@ -34,14 +34,14 @@ const [menuData, setMenuData] = useState([]);
     return (
         <>
             {menuData.map((menu, index) => {
-            let category = 'Safety';
+            let category = 'Comprehensive';
 
             // id에 따라 카테고리 설정
-            if (menu.id === 14) {
+            if (menu.id === 144 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
                 category = 'Comprehensive';
-            } else if (menu.id === 4) {
+            } else if (menu.id === 534) {
                 category = 'Certification';
-            } else if (menu.id === 24) {
+            } else if (menu.id === 314) {
                 category = 'Safety';
             }
             

@@ -8,7 +8,7 @@ export default function Emergency() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/post/{category_id}');
+            const response = await fetch('https://catchkorea-a5799a624288.herokuapp.com/search/314');
             const jsonData = await response.json();
 
             if (jsonData) {
@@ -56,7 +56,7 @@ export default function Emergency() {
                 <Header/>
                 {data !== null && (
                 <Body
-                    iconSrc1='\AppIcon\Emergency.png'
+                    iconSrc1={data.imageLink}
                     appName={data.title}
                     text1={data.contents} // API 응답 데이터에 있는 앱 설명 필드
                     handleDownload={handleDownload}
