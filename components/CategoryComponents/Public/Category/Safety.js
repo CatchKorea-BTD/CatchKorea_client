@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MenuBox from '../../../../components/AppComponents/MenuBox';
 import axios from 'axios';
 
-export default function Content() {
+export default function Content({ selectedItem }) {
     const [menuData, setMenuData] = useState([]); // 메뉴 데이터를 저장할 상태
 
     useEffect(() => {
