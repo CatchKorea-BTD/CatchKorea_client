@@ -16,8 +16,10 @@ export default function Content() {
             }
         };
 
-        fetchMenuData(); // 메뉴 데이터를 가져오는 함수 호출
-    }, []);
+        if (selectedItem !== null) {
+            fetchMenuData();
+        }
+    }, [selectedItem]);
 
     return (
         <>
