@@ -11,7 +11,7 @@ export default function Header(){
 
   return (
     <S.Container>
-      <Link href="/Main">
+      <Link href="/index">
         <S.Logo src="/img/CatchKorea.png" /></Link>      
       <S.MenuBar src="/img/menubar.png" onClick={toggleMenu} menuVisible={menuVisible} />
       <S.Search type="text" placeholder="map" />
