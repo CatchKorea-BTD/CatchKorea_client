@@ -38,7 +38,7 @@ const [menuData, setMenuData] = useState([]);
             {menuData.map((menu, index) => (
                 <MenuBox
                     key={index}
-                    link={`/InfoComponents/Traffic/Map/${menu.imageLink.split("\\").pop()}`}
+                    link={`/InfoComponents/Traffic/Taxi/${menu.imageLink.split("\\").pop()}`}
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
