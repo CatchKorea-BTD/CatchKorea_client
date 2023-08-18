@@ -2,20 +2,28 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MenuBox from '../../../../components/AppComponents/MenuBox';
 
-export default function Content() {
-    const [menuData, setMenuData] = useState([]);
+export default function Content({ selectedItem }) {
+const [menuData, setMenuData] = useState([]);
 
     useEffect(() => {
-        // 백엔드 API에서 메뉴 데이터를 가져오는 함수를 호출하고 데이터를 설정합니다.
         const fetchMenuData = async () => {
             try {
-                const response = await fetch('ht');
+                let apiEndpoint = '';
+
+                if (selectedItem === 0) {
+                    apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/14';
+                } else if (selectedItem === 1) {
+                    apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/24';
+                }
+
+                const response = await fetch(apiEndpoint);
                 const data = await response.json();
                 setMenuData(data);
             } catch (error) {
                 console.error('Error fetching menu data:', error);
             }
         };
+
         if (selectedItem !== null) {
             fetchMenuData();
         }
