@@ -1,5 +1,5 @@
 // 각 카테고리 클릭시 나오는 컨텐츠 파일 분리
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from "./Body.styled";
 import Comprehensive from './Category/Comprehensive';
 import Safety from './Category/Safety';
