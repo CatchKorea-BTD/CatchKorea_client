@@ -5,7 +5,7 @@ import Body from '../../components/CategoryComponents/Public/Body';
 
 export default function Public(){
 
-   const [selectedItem, setSelectedItem] = useState(null);
+   const [selectedItem, setSelectedItem] = useState(0);
 
    const handleItemClick = (index) => {
       setSelectedItem(index);

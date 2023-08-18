@@ -12,9 +12,6 @@ export default function Body({selectedItem, onItemClick}) {
     if (selectedItem !== null) {
         // 선택한 항목에 따라 Content 컴포넌트 렌더링
         contentComponent = <Content selectedItem={selectedItem} />;
-    } else {
-        // 초기에는 Comprehensive 컴포넌트를 렌더링
-        contentComponent = <Comprehensive />;
     }
 
     return (
