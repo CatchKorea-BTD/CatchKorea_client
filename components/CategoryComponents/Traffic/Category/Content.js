@@ -38,7 +38,7 @@ const [menuData, setMenuData] = useState([]);
             {menuData.map((menu, index) => (
                 <MenuBox
                     key={index}
-                    link='/InfoComponents/Public/Comprehensive/MobileID'
+                    link="/InfoComponents/Traffic/Map/KakaoMap"
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
