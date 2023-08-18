@@ -56,6 +56,7 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 text-align: center;
+margin: 5px;
 
 `;
 

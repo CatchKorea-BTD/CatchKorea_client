@@ -8,24 +8,18 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const Logo = styled.div`
-  width: 84px;
-  height: 18px;
+export const Logo = styled.img`
+  width: 120px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto; 
   position: absolute; 
-  top: 27px; 
+  top: 23px; 
   left: 50%; 
-  transform: translateX(-50%);
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 18px;
-  color: #686868;
-  cursor: default;
+  transform: translateX(-50%); 
+  cursor: pointer;
 `;
 
 export const MenuBar = styled.img`

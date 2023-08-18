@@ -23,14 +23,11 @@ export default function Albamon() {
         fetchData();
     }, []);
 
-    const handleDownload = () => {
-        // 갤럭시와 아이폰을 구분하여 다운로드 링크 설정
-        if (navigator.userAgent.match(/Android/i)) {
-            window.location.href = 'https://play.google.com/store/search?q=%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8&c=apps&hl=ko-KR';
-        } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            window.location.href = 'https://apps.apple.com/kr/app/%EC%95%A0%EB%B0%98%EC%A3%BC%ED%98%B8/id395800058';
-        }
-    };
+  const handleDownload = () => {
+    if (data && data.serviceLink) {
+      window.location.href = data.serviceLink;
+    }
+  };
 
     const handleShare = async () => {
         try {

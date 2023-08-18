@@ -3,6 +3,7 @@ import React from 'react';
 import * as S from "./Body.styled";
 import Content from './Category/Content';
 import Link from 'next/link'
+import TipBox from '@/components/TipComponents/TipBox';
 
 export default function Body({selectedItem, onItemClick}) {
 
@@ -34,7 +35,7 @@ export default function Body({selectedItem, onItemClick}) {
     return (
 
         <S.Container>
-            <S.Title>Public Service</S.Title>
+            <S.Title>Application</S.Title>
             <S.MenuBar onItemClick={onItemClick}>
                 {
                     menuItems.map((item, index) => (
@@ -49,10 +50,12 @@ export default function Body({selectedItem, onItemClick}) {
                 }
             </S.MenuBar>
             <S.Line/>
-            
+            <TipBox />
             {contentComponent}
             <S.CopyrightContainer>
-                <S.Copyright>@ Copyright</S.Copyright>
+                <S.Copyright>© [2023] CatchKorea. </S.Copyright>
+                <S.text>All rights reserved. Reproduction, distribution, transmission, storage, or printing of this document, in part or in whole, without prior written consent is prohibited.
+</S.text>
             </S.CopyrightContainer>
         </S.Container>
     );
