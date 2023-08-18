@@ -10,10 +10,27 @@ export default function Body({selectedItem, onItemClick}) {
     const ContentComponents = [Comprehensive, Safety];
     const menuItems = ['Comprehensive Certification', 'Safety'];
     let contentComponent;
+        const [menuData, setMenuData] = useState([]);
+
+    useEffect(() => {
+        // 백엔드 API에서 메뉴 데이터를 가져오는 함수를 호출하고 데이터를 설정합니다.
+        const fetchMenuData = async () => {
+            try {
+                const response = await fetch('https://your-backend-api-url');
+                const data = await response.json();
+                setMenuData(data);
+            } catch (error) {
+                console.error('Error fetching menu data:', error);
+            }
+        };
+        
+        fetchMenuData();
+    }, [selectedItem]); // selectedItem이 변경될 때마다 데이터를 다시 가져옴
+
     if (selectedItem !== null) {
-        contentComponent = ContentComponents[selectedItem]();
+        contentComponent = ContentComponents[selectedItem]({ menuData }); // menuData를 컴포넌트로 전달
     } else {
-        contentComponent = Comprehensive();
+        contentComponent = Comprehensive({ menuData }); // menuData를 컴포넌트로 전달
     }
 
     return (
