@@ -55,6 +55,7 @@ export const MenuBottom1Text2 = styled.div`
   text-align: left;
   margin-top: 28px;
   margin-left: 60px;
+  overflow: hidden;  
 `;
 
 // 해시태그
