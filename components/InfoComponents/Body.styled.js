@@ -46,8 +46,8 @@ export const Info = styled.div`
   font-style: normal;
   font-weight: 500;
   white-space: pre-line;
-  font-size: 9px;
-  line-height: 11px;
+  font-size: 15px;
+  line-height: 1.5;
   color: #737373;
   padding: 0 30px;
 `;
