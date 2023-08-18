@@ -6,7 +6,7 @@ import Body from '../../components/CategoryComponents/Traffic/Body';
 
 export default function Traffic(){
 
-   const [selectedItem, setSelectedItem] = useState(null);
+   const [selectedItem, setSelectedItem] = useState(0);
 
    const handleItemClick = (index) => {
       setSelectedItem(index);

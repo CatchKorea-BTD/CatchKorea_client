@@ -2,25 +2,18 @@
 import React, { useState, useEffect } from 'react';
 import * as S from "./Body.styled";
 import TipBox from '../../../components/TipComponents/TipBox';
-import Map from './Category/Map';
-import Public from './Category/Public';
-import Navigation from './Category/Navigation';
-import Taxi from './Category/Taxi';
+import Content from './Category/Content';
 import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
 
-    const ContentComponents = [Map, Public, Navigation, Taxi];
     const menuItems = ['Map', 'Public Transport', 'Navigation', 'Taxi'];
+
     let contentComponent;
     if (selectedItem !== null) {
-        contentComponent = ContentComponents[selectedItem]();
-    } else {
-        contentComponent = Map();
+        // 선택한 항목에 따라 Content 컴포넌트 렌더링
+        contentComponent = <Content selectedItem={selectedItem} />;
     }
-
-    useEffect(() => {
-    }, []);
 
     return (
 

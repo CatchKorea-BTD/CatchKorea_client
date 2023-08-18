@@ -2,7 +2,6 @@
 import React from 'react';
 import * as S from "./Body.styled";
 import Content from './Category/Content';
-import Comprehensive from './Category/Comprehensive';
 import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
