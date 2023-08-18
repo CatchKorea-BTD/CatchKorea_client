@@ -33,16 +33,33 @@ const [menuData, setMenuData] = useState([]);
 
     return (
         <>
-            {menuData.map((menu, index) => (
+            {menuData.map((menu, index) => {
+            let category = '';
+
+            // id에 따라 카테고리 설정
+            if (menu.id === 14) {
+                category = 'Comprehensive';
+            } else if (menu.id === 4) {
+                category = 'Certification';
+            } else if (menu.id === 24) {
+                category = 'Safety';
+            }
+            
+            // 그 외의 id에 대한 카테고리 설정
+
+            const link = `/InfoComponents/Public/${category}/${menu.imageLink.split("\\").pop()}`;
+
+            return (
                 <MenuBox
                     key={index}
-                    link='/InfoComponents/Public/Comprehensive/MobileID'
+                    link={link}
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
                     hashtag1={menu.hashtag}
                 />
-            ))}
+            );
+        })}
         </>
     );
 }
