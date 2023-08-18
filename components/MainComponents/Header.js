@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as S from "./Header.styled";
 import MenuBar from "../MenuComponents/MenuBar";
+import Link from 'next/link'
 
 export default function Header(){
   const [menuVisible, setMenuVisible] = useState(false);
