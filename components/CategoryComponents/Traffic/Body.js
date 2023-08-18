@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import * as S from "./Body.styled";
 import TipBox from '../../../components/TipComponents/TipBox';
 import Content from './Category/Content';
+import Copyright from '../../Copyright/Copyright';
 import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
@@ -35,9 +36,7 @@ export default function Body({selectedItem, onItemClick}) {
             <S.Line/>
             <TipBox/> 
             {contentComponent}
-            <S.CopyrightContainer>
-                <S.Copyright>@ Copyright</S.Copyright>
-            </S.CopyrightContainer>
+            <Copyright />
 
         </S.Container>
 

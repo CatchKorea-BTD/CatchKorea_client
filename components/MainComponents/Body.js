@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from "./Body.styled";
 import Link from 'next/link'
+import Copyright from '../Copyright/Copyright';
 
 export default function Body(){
   return (
@@ -44,9 +45,7 @@ export default function Body(){
          </Link>
          </S.MenuBottom2>
 
-         <S.CopyrightContainer>
-            <S.Copyright>@ Cpoyright</S.Copyright>
-         </S.CopyrightContainer>
+         <Copyright />
 
         
 
