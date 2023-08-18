@@ -1,8 +1,8 @@
 // 각 카테고리 클릭시 나오는 컨텐츠 파일 분리
 import React from 'react';
 import * as S from "./Body.styled";
-import Content from './Category/Comprehensive';
-import Safety from './Category/Safety';
+import Content from './Category/Content';
+import Comprehensive from './Category/Comprehensive';
 import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
@@ -14,7 +14,7 @@ export default function Body({selectedItem, onItemClick}) {
         contentComponent = <Content selectedItem={selectedItem} />;
     } else {
         // 초기에는 Comprehensive 컴포넌트를 렌더링
-        contentComponent = <Safety />;
+        contentComponent = <Comprehensive />;
     }
 
     return (
