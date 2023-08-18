@@ -55,7 +55,7 @@ export const numberMenu = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
-  margin: 15px 0;
+  margin: 50px 12px;
 `;
 
 export const img = styled.img`
@@ -97,3 +97,38 @@ export const Info119 = styled.div`
    line-height: normal;
 `;
 
+export const Info112 = styled.div`
+   color: #535353;
+   font-family: Inter;
+   font-size: 10px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+`;
+
+export const Info1339 = styled.div`
+   color: #535353;
+   font-family: Inter;
+   font-size: 10px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+`;
+
+export const Info1330 = styled.div`
+   color: #535353;
+   font-family: Inter;
+   font-size: 10px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+`;
+
+export const Info182 = styled.div`
+   color: #535353;
+   font-family: Inter;
+   font-size: 10px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+`;
