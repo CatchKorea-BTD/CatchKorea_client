@@ -1,36 +1,19 @@
 // 각 카테고리 클릭시 나오는 컨텐츠 파일 분리
 import React from 'react';
 import * as S from "./Body.styled";
-import Cultural from './Category/Cultural';
-import Sns from './Category/Sns';
-import Search from './Category/Search';
-import Finance from './Category/Finance';
-import Food from './Category/Food';
-import Ecommerce from './Category/Ecommerce';
-import Used from './Category/Used';
-import Home from './Category/Home';
-import PartTime from './Category/PartTime';
-import Trendy from './Category/Trendy';
-import Employment from './Category/Employment';
+import Content from './Category/Content';
 import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
 
-    const ContentComponents = [
-        Cultural,
-        Sns,
-        Search,
-        Finance,
-        Food,
-        Ecommerce,
-        Used,
-        Home,
-        PartTime,
-        Trendy,
-        Employment
-    ];
     const menuItems = [
-        'Cultural life',
+        'BookStore',
+        'Movie',
+        'Restaurants',
+        'KickBoard',
+        'Music',
+        'Travel',
+        'Present',
         'SNS',
         'Search Engine',
         'Finance',
@@ -38,15 +21,15 @@ export default function Body({selectedItem, onItemClick}) {
         'E-Commerce',
         'Used Item',
         'Home',
-        'Part-time',
+        'Part-time/Job',
+        'Parcel Service',
         'Trendy App',
-        'Employment'
     ];
+
     let contentComponent;
     if (selectedItem !== null) {
-        contentComponent = ContentComponents[selectedItem]();
-    } else {
-        contentComponent = Cultural();
+        // 선택한 항목에 따라 Content 컴포넌트 렌더링
+        contentComponent = <Content selectedItem={selectedItem} />;
     }
 
     return (
