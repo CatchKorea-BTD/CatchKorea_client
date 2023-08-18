@@ -13,6 +13,8 @@ const [menuData, setMenuData] = useState([]);
                 if (selectedItem === 0) {
                     apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/14';
                 } else if (selectedItem === 1) {
+                    apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/4';
+                } else if (selectedItem === 2) {
                     apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/24';
                 }
 

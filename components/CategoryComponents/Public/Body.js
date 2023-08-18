@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
 
-    const menuItems = ['Comprehensive Certification', 'Safety'];
+    const menuItems = ['Comprehensive', 'Certification', 'Safety'];
     let contentComponent;
     if (selectedItem !== null) {
         // 선택한 항목에 따라 Content 컴포넌트 렌더링
