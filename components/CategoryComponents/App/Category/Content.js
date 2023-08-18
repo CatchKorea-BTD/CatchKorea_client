@@ -42,8 +42,6 @@ const [menuData, setMenuData] = useState([]);
                     apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/184';
                 } else if (selectedItem === 15) {
                     apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/224';
-                } else if (selectedItem === 16) {
-                    apiEndpoint = 'https://catchkorea-a5799a624288.herokuapp.com/post/214';
                 } 
 
                 const response = await fetch(apiEndpoint);
@@ -62,16 +60,43 @@ const [menuData, setMenuData] = useState([]);
     return (
         <>
             {menuData.map((menu, index) => {
-            let category = 'Comprehensive';
+            let category = 'BookStore';
 
             // id에 따라 카테고리 설정
-            if (menu.id === 144 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
-                category = 'Comprehensive';
-            } else if (menu.id === 534) {
-                category = 'Certification';
-            } else if (menu.id === 314) {
-                category = 'Safety';
-            }
+                if (menu.id === 144 || menu.id === || menu.id === 264 || menu.id === 284) {
+                    category = 'BookStore';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Movie';
+                } else if (menu.id === 314) {
+                    category = 'Restaurants';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'KickBoard';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Music';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Travel';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Present';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Sns';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Search'
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Finance';
+                } else if (menu.id === 24 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Food';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Ecommerce';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Used';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Home';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'PartTime';
+                } else if (menu.id === 534 || menu.id === 224 || menu.id === 264 || menu.id === 284) {
+                    category = 'Trendy';
+                }
+
             
             // 그 외의 id에 대한 카테고리 설정
 

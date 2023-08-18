@@ -35,16 +35,35 @@ const [menuData, setMenuData] = useState([]);
 
     return (
         <>
-            {menuData.map((menu, index) => (
+            {menuData.map((menu, index) => {
+            let category = 'Map';
+
+            // id에 따라 카테고리 설정
+            if (menu.id === 324 || menu.id === 334) {
+                category = 'Map';
+            } else if (menu.id === 354 || menu.id === 374 || menu.id === 454  || menu.id === 474) {
+                category = 'Public';
+            } else if (menu.id === 434 || menu.id === 504) {
+                category = 'Navigation';
+            } else if (menu.id === 394) {
+                category = 'Taxi';
+            }
+            
+            // 그 외의 id에 대한 카테고리 설정
+
+            const link = `/InfoComponents/Traffic/${category}/${menu.imageLink.split("\\").pop()}`;
+
+            return (
                 <MenuBox
                     key={index}
-                    link={`/InfoComponents/Traffic/Taxi/${menu.imageLink.split("\\").pop()}`}
+                    link={link}
                     iconSrc={menu.imageLink}
                     text1={menu.title}
                     text2={menu.contents}
                     hashtag1={menu.hashtag}
                 />
-            ))}
+            );
+        })}
         </>
     );
 }

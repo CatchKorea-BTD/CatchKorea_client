@@ -22,7 +22,6 @@ export default function Body({selectedItem, onItemClick}) {
         'Used Item',
         'Home',
         'Part-time/Job',
-        'Parcel Service',
         'Trendy App',
     ];
 
