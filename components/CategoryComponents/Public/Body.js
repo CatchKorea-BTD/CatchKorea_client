@@ -2,7 +2,7 @@
 import React from 'react';
 import * as S from "./Body.styled";
 import Content from './Category/Comprehensive';
-// import Safety from './Category/Safety';
+import Safety from './Category/Safety';
 import Link from 'next/link'
 
 export default function Body({selectedItem, onItemClick}) {
@@ -14,7 +14,7 @@ export default function Body({selectedItem, onItemClick}) {
         contentComponent = <Content selectedItem={selectedItem} />;
     } else {
         // 초기에는 Comprehensive 컴포넌트를 렌더링
-        contentComponent = <Comprehensive />;
+        contentComponent = <Safety />;
     }
 
     return (
