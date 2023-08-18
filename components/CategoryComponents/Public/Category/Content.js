@@ -34,7 +34,7 @@ const [menuData, setMenuData] = useState([]);
     return (
         <>
             {menuData.map((menu, index) => {
-            let category = '';
+            let category = 'Safety';
 
             // id에 따라 카테고리 설정
             if (menu.id === 14) {
